@@ -1,3 +1,6 @@
+fork from https://gist.github.com/crizCraig/2816295
+ref https://developers.google.com/image-search/v1/jsondevguide
+
 Useage:
 
 edit list.lst
@@ -10,3 +13,6 @@ $python fetch.py
 
 Depands:
 wget 
+
+power by lvzongting@gmail.com
+西电开源社区
