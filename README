@@ -1,0 +1,9 @@
+Useage
+
+edit list.lst
+content two column query and num
+if num is empty ,num is default 50.
+
+and then
+
+$python fetch.py
