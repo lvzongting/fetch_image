@@ -1,5 +1,11 @@
+google
 fork from https://gist.github.com/crizCraig/2816295
 ref https://developers.google.com/image-search/v1/jsondevguide
+flikr
+ref https://secure.flickr.com/services/api/misc.urls.html
+ref https://secure.flickr.com/services/api/flickr.photos.search.html
+ref https://secure.flickr.com/services/api/explore/flickr.photos.search
+
 
 Useage:
 
@@ -9,7 +15,7 @@ if num is empty ,num is default 50.
 
 and then
 
-$python fetch.py
+$python2 fetch.py
 
 Depands:
 wget 

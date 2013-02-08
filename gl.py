@@ -34,7 +34,7 @@ def get_img(query, path, img_num):
            
            url = image_info['unescapedUrl']
            try:
-               print 'Fetching  %s ' % url 
+               print 'Fetching %s' % url
                os.system('wget "' + url + '" -O ' + file)
                print 'save as %s' % file
            except ConnectionError, e:
