@@ -5,6 +5,14 @@ flikr
 ref https://secure.flickr.com/services/api/misc.urls.html
 ref https://secure.flickr.com/services/api/flickr.photos.search.html
 ref https://secure.flickr.com/services/api/explore/flickr.photos.search
+bing
+due to have no appid
+dirty hacker
+bing.com/images/search?q=lisa&count=10&first=1
+re.compile('(?<=a href="/images/search\?q=' + query + '\&amp;view=detail&amp;id=).+?(?=\&amp;FORM=    IDFRIR)')
+following 
+re.compile('(?<=<a id="m_fsi" href=").+?(?=" target)')
+get full size link
 
 
 Useage:
@@ -17,8 +25,14 @@ and then
 
 $python2 fetch.py
 
+which website you need ,please uncommon it in fetch.py.
+
 Depands:
-wget  or  aria2c 
+wget  or  aria2c or none
+
+which downloader you have, please uncommon it in gl.py fkr.py bg.py.
+
+enjoy it!
 
 power by lvzongting@gmail.com
 西电开源社区
