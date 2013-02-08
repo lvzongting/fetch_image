@@ -1,7 +1,9 @@
+auto fetch image in the list from google flickr bing
+
 google
 fork from https://gist.github.com/crizCraig/2816295
 ref https://developers.google.com/image-search/v1/jsondevguide
-flikr
+flickr
 ref https://secure.flickr.com/services/api/misc.urls.html
 ref https://secure.flickr.com/services/api/flickr.photos.search.html
 ref https://secure.flickr.com/services/api/explore/flickr.photos.search
