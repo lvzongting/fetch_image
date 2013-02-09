@@ -22,6 +22,8 @@ Useage:
 edit list.lst
 content two column query and num
 if num is empty ,num is default 50.
+multiwords split by one space ' '
+words and num split by more then two spaces 
 
 and then
 

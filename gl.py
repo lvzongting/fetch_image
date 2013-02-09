@@ -37,8 +37,9 @@ def get_img(query, path, img_num):
            try:
                print 'Fetching %s' % url
                urllib.urlretrieve(url, file)
-#              os.system('aria2c "' + url + '" -o ' + file)
+#               os.system('aria2c "' + url + '" -o ' + file)
 #               os.system('wget "' + url + '" -O ' + file)
+#               print '####' + 'wget "' + url + '" -O ' + file + '####'
                print 'save as %s' % file
            except ConnectionError, e:
                print 'could not download %s' % url
