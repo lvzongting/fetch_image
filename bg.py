@@ -17,8 +17,7 @@ def get_img(query, path, img_num):
     Don't print or republish images without permission.
     I used this to train a learning algorithm.
     """
-    query=query.replace(' ','+')
-    BASE_URL = "http://bing.com/images/search?q=" + query + "&count=" + str(img_num)   #&first=10 
+    BASE_URL = "http://bing.com/images/search?q=" + query.replace(' ','+') + "&count=" + str(img_num)   #&first=10 
   
     BASE_PATH = os.path.join(path, query)
   
@@ -26,14 +25,14 @@ def get_img(query, path, img_num):
         os.makedirs(BASE_PATH)
     print 'Fetching index....'
     r = requests.get(BASE_URL)
-    p = re.compile('(?<=a href="/images/search\?q=' + query.replace('+','\+') + '\&amp;view=detail&amp;id=).+?(?=\&amp;FORM=IDFRIR)')
+    p = re.compile('(?<=a href="/images/search\?q=' + query.replace(' ','\+') + '\&amp;view=detail&amp;id=).+?(?=\&amp;FORM=IDFRIR)')
     images_id = p.findall(r.text)
     title=1
     for id in images_id:
         file = os.path.join(BASE_PATH, '%s.jpg') % str(title)
 
         print 'Fetching image detail...'
-        detail = requests.get('http://bing.com/images/search?q=' + query + '&view=detail&id=' + id + '&FORM=IDFRIR')  
+        detail = requests.get('http://bing.com/images/search?q=' + query.replace(' ','+') + '&view=detail&id=' + id + '&FORM=IDFRIR')  
         p =re.compile('(?<=<a id="m_fsi" href=").+?(?=" target)') 
         url = str(p.findall(detail.text)[0])
 
@@ -52,9 +51,4 @@ def get_img(query, path, img_num):
   
 # Example use
 #go(query, Directory,10)
-
-
-
-
-
 

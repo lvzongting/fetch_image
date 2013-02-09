@@ -15,5 +15,5 @@ for line in file.readlines():
 #    print type(int(line[1]))
 #    print '####'
 #    gl.get_img(str(line[0]),'google',int(line[1]))
-#    fkr.get_img(str(line[0]),'fkr',int(line[1]))
-    bg.get_img(str(line[0]),'bg',int(line[1]))
+    fkr.get_img(str(line[0]),'fkr',int(line[1]))
+#    bg.get_img(str(line[0]),'bg',int(line[1]))

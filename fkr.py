@@ -20,7 +20,10 @@ def get_img(query, path, img_num):
     Don't print or republish images without permission.
     I used this to train a learning algorithm.
     """
-    BASE_URL = 'https://secure.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=284e9116c791d6d84991e75a31b9ac5a&text='+ query +'&per_page=' + str(img_num)
+    
+    api_key = '4b6a2f89f249ee3b0f2f1e97eb2254a0' 
+    #if meet api_key Error please visit https://secure.flickr.com/services/api/explore/flickr.photos.search  and push the "Call method" button ,and then search api_key in the reply page 
+    BASE_URL = 'https://secure.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=' + api_key + '&text='+ query.replace(' ','+') +'&per_page=' + str(img_num)
 
     BASE_PATH = os.path.join(path, query)
   
