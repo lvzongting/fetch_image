@@ -45,6 +45,9 @@ def get_img(query, path, img_num):
        except ConnectionError, e:
            print 'could not download %s' % url
            continue
+       else :
+           print 'download %s is uncomplete' % url
+           continue
 
        title += 1
 
