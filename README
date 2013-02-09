@@ -16,7 +16,6 @@ following
 re.compile('(?<=<a id="m_fsi" href=").+?(?=" target)')
 get full size link
 
-
 Useage:
 
 edit list.lst
@@ -38,6 +37,20 @@ which downloader you have, please uncomment it in gl.py fkr.py bg.py.
 
 Notice:
 IF flickr api_key is Error ,please modify fkr.py following the comment
+
+TODO
+
+add UTF8 support 
+add update flickr api_key method   ----ok!
+add try exception else             ----ok!
+add multiwords support             ----ok!
+add interior download without need other download addition     ----ok!
+add bing image search fetch        ----ok!
+add aria2 to download the image    ----ok!
+add flikr image search fetch       ----ok!
+add read words form list.lst       ----ok!
+add wget to download the image     ----ok!
+add google image search fetch      ----ok!
 
 enjoy it!
 
