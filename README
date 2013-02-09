@@ -29,12 +29,15 @@ and then
 
 $python2 fetch.py
 
-which website you need ,please uncommon it in fetch.py.
+which website you need ,please uncomment it in fetch.py.
 
 Depands:
 wget  or  aria2c or none
 
-which downloader you have, please uncommon it in gl.py fkr.py bg.py.
+which downloader you have, please uncomment it in gl.py fkr.py bg.py.
+
+Notice:
+IF flickr api_key is Error ,please modify fkr.py following the comment
 
 enjoy it!
 
