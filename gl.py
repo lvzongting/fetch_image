@@ -40,7 +40,7 @@ def get_img(query, path, img_num):
 #               os.system('aria2c "' + url + '" -o ' + file)
 #               os.system('wget "' + url + '" -O ' + file)
 #               print '####' + 'wget "' + url + '" -O ' + file + '####'
-#               print 'save as %s' % file
+               print 'save as %s' % file
            except ConnectionError, e:
                print 'could not download %s' % url
                continue

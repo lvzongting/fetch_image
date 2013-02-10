@@ -25,14 +25,16 @@ def get_img(query, path, img_num):
         os.makedirs(BASE_PATH)
     print 'Fetching index....'
     r = requests.get(BASE_URL)
-    p = re.compile('(?<=a href="/images/search\?q=' + query.replace(' ','\+') + '\&amp;view=detail&amp;id=).+?(?=\&amp;FORM=IDFRIR)')
+
+#    print urllib.quote(query.replace(' ','\+')).lower()
+    p = re.compile('(?<=a href="/images/search\?q=' + urllib.quote(query.replace(' ','\+')).lower() + '\&amp;view=detail&amp;id=).+?(?=\&amp;FORM=IDFRIR)')
     images_id = p.findall(r.text)
     title=1
     for id in images_id:
         file = os.path.join(BASE_PATH, '%s.jpg') % str(title)
 
         print 'Fetching image detail...'
-        detail = requests.get('http://bing.com/images/search?q=' + query.replace(' ','+') + '&view=detail&id=' + id + '&FORM=IDFRIR')  
+        detail = requests.get('http://bing.com/images/search?q=' + urllib.quote(query.replace(' ','+')).lower() + '&view=detail&id=' + id + '&FORM=IDFRIR')  
         p =re.compile('(?<=<a id="m_fsi" href=").+?(?=" target)') 
         url = str(p.findall(detail.text)[0])
 
@@ -46,9 +48,9 @@ def get_img(query, path, img_num):
         except ConnectionError, e:
             print 'could not download %s' % url
             continue
-        else :
-            print 'download %s is uncomplete' % url
-            continue  
+#        else :
+#            print 'download %s is uncomplete' % url
+#            continue  
 
         title += 1
   

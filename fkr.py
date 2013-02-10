@@ -21,7 +21,7 @@ def get_img(query, path, img_num):
     I used this to train a learning algorithm.
     """
     
-    api_key = '4b6a2f89f249ee3b0f2f1e97eb2254a0' 
+    api_key = 'ba12e9d62ea20cf4a6c6aab4baa0c2f1' 
     #if meet api_key Error please visit https://secure.flickr.com/services/api/explore/flickr.photos.search  and push the "Call method" button ,and then search api_key in the reply page 
     BASE_URL = 'https://secure.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=' + api_key + '&text='+ query.replace(' ','+') +'&per_page=' + str(img_num)
 
@@ -45,9 +45,9 @@ def get_img(query, path, img_num):
        except ConnectionError, e:
            print 'could not download %s' % url
            continue
-       else :
-           print 'download %s is uncomplete' % url
-           continue
+#       else :
+#           print 'download %s is uncomplete' % url
+#           continue
 
        title += 1
 
