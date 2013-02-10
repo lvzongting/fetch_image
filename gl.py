@@ -40,14 +40,14 @@ def get_img(query, path, img_num):
 #               os.system('aria2c "' + url + '" -o ' + file)
 #               os.system('wget "' + url + '" -O ' + file)
 #               print '####' + 'wget "' + url + '" -O ' + file + '####'
-               print 'save as %s' % file
+#               print 'save as %s' % file
            except ConnectionError, e:
                print 'could not download %s' % url
                continue
-           else :
-               print 'download %s is uncomplete' % url
-               continue
-  
+#           except ConnectTooShortError,e: 
+#               print 'download %s is uncomplete' % url
+#               continue
+ 
            i += 1
   
        start += 4 # 4 images per page.
